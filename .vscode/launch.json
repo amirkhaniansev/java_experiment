@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-UsersApiApplication<users_api>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.example.users_api.UsersApiApplication",
+            "projectName": "users_api",
+            "args": ""
+        }
+    ]
+}
