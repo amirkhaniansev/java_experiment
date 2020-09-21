@@ -6,6 +6,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -36,7 +37,7 @@ public class UserController {
     }
 
     @PostMapping
-    User createUser(User user) {
+    User createUser(@RequestBody User user) {
         user.setId(0);
 
         return this.repository.save(user);
