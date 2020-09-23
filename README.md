@@ -11,12 +11,26 @@ There are 2 endpoints in the API
 
 ```json
 {
-"name": "{NAME}",
-"age": "{AGE}"
+    "name": "{NAME}",
+    "age": "{AGE}"
 }
 ```
 **GET**  /api/v1/user?name={NAME}&page={PAGE_NUMBER}&count={COUNT_NUMBER} \
 _**PAGE_NUMBER**_ and _**COUNT**_ parameters are optional. In case of not providing the values, the API will return the first user with the given _**NAME**_ parameter if such a record exists. This parameter is _mandatory_.
+```json
+[
+    {
+        "id":  1, 
+        "name": "Matt", 
+        "age": 45
+    }, 
+    {
+        "id": 2, 
+        "name": "Matt", 
+        "age": 68
+    }
+]
+```
 
 The following database tables are used for the purposes described above:
 id | INT            
