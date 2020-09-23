@@ -1,6 +1,6 @@
 # Changelog
 
-## [v1.0.0]()
+## [v1.0.0](https://github.com/amirkhaniansev/java_experiment/releases/tag/v1.0.0)
 
 ## Closed Issues:
 * Database Enhancement [#9](https://github.com/amirkhaniansev/java_experiment/issues/9)
