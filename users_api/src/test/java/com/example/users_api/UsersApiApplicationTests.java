@@ -1,7 +1,10 @@
 package com.example.users_api;
 
+import static org.hamcrest.Matchers.containsString;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -25,7 +28,7 @@ class UsersApiApplicationTests {
 	}
 
 	@Test
-	void getUsers() throws Exception {
+	void testGetUsers() throws Exception {
 		this.mockMvc
 			.perform(get("/api/v1/user/?name=Sevak"))
 			.andDo(print())
@@ -40,5 +43,14 @@ class UsersApiApplicationTests {
 			.perform(get("/api/v1/user/?name=Sevak&page=0&count=2"))
 			.andDo(print())
 			.andExpect(status().isOk());
+	}
+
+	@Test
+	void testPostUsers() throws Exception {
+		this.mockMvc
+			.perform(post("{\"name\":\"Alice\", \"age\" :14 }"))
+			.andDo(print())
+			.andExpect(status().isOk())
+			.andExpect(content().string(containsString("{\"name\":\"Alice\", \"age\" :14 }")));
 	}
 }
