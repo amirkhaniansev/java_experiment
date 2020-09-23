@@ -42,7 +42,7 @@ _**id**_ is an auto increment integer which is a primary key. In the context of 
 
 _**age**_ is an integer. In the context of optimization and more efficient occupation of database memory, it could hypothetically be useful to use structures with a smaller size like 2-bytes or even 1-byte integers. In addition to that this column does not need to be a signed one, because the concept of age does not include the idea of sign.
 
-_**name**_ is a string value with a variable size and the maximal value of its size is _2000_ characters. Note that, this column has utf_8 character set. 
+_**name**_ is a string value with a variable size and the maximal value of its size is _255_ characters. Note that, this column has utf_8 character set. 
 
 ## How to run
 This API is tested on **Ubuntu 18**  machine however the same thing can be done on other POSIX-based operating systems, and on Windows and MacOS machines as well. \
