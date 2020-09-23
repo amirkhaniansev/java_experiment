@@ -1,10 +1,20 @@
 package com.example.users_api;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
 public class UserRequest {
+    @NotNull
+    @NotEmpty
     private String name;
 
+    @Min(0)
     private Integer page;
 
+    @Min(5)
+    @Max(100)
     private Integer count;
 
     public String getName() {
