@@ -21,12 +21,12 @@ public class UserController {
 
     @GetMapping
     List<User> getUsers(UserRequest request) {
-        if(request.getPage() < 0)
-            request.setPage(1);
+        if(request.getPage() == null)
+            request.setPage(0);
         
-        if(request.getCount() <= 0 || request.getCount() >= 100) 
-            request.setCount(20);
-
+        if(request.getCount() == null)
+            request.setCount(1);
+        
         return this.repository
                    .findAllByName(
                        request.getName(), 
@@ -37,7 +37,7 @@ public class UserController {
     }
 
     @PostMapping
-    User createUser(@RequestBody User user) {
+    User createUser(@RequestBody(required = true) User user) {
         user.setId(0);
 
         return this.repository.save(user);
