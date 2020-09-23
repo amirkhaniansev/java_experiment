@@ -1,12 +1,9 @@
 package com.example.users_api;
 
+import javax.validation.constraints.Min;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-
-import org.springframework.beans.factory.annotation.Value;
-
-import javax.validation.constraints.Min;
 
 public class UserRequest {
     @NotNull
