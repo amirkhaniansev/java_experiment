@@ -11,8 +11,8 @@ There are 2 endpoints in the API
 
 ```json
 {
-"name": "{NAME}",
-"age": "{AGE}"
+    "name": "{NAME}",
+    "age": "{AGE}"
 }
 ```
 **GET**  /api/v1/user?name={NAME}&page={PAGE_NUMBER}&count={COUNT_NUMBER} \
