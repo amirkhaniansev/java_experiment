@@ -27,17 +27,17 @@ class UsersApiApplicationTests {
 	@Test
 	void getUsers() throws Exception {
 		this.mockMvc
-			.perform(get("/?name=Sevak"))
+			.perform(get("/api/v1/user/?name=Sevak"))
 			.andDo(print())
 			.andExpect(status().isOk());
 
 		this.mockMvc
-			.perform(get("/?name=Sevak&page=0"))
+			.perform(get("/api/v1/user/?name=Sevak&page=0"))
 			.andDo(print())
 			.andExpect(status().isOk());
 		
 		this.mockMvc
-			.perform(get("/?name=Sevak&page=0&count=2"))
+			.perform(get("/api/v1/user/?name=Sevak&page=0&count=2"))
 			.andDo(print())
 			.andExpect(status().isOk());
 	}
