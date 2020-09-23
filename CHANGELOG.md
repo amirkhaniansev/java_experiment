@@ -3,6 +3,7 @@
 ## [v1.0.0]()
 
 ## Closed Issues:
+* Automated Testing [#7](https://github.com/amirkhaniansev/java_experiment/issues/7)
 * CHANGELOG [#4](https://github.com/amirkhaniansev/java_experiment/issues/4)
 * README Change [#12](https://github.com/amirkhaniansev/java_experiment/issues/12)
 * README [#3](https://github.com/amirkhaniansev/java_experiment/issues/3)
@@ -11,6 +12,7 @@
 * User Database Scripts in MySQL [#1](https://github.com/amirkhaniansev/java_experiment/issues/1)
 
 ## Closed Pull Requests:
+* Automated Testing [#7](https://github.com/amirkhaniansev/java_experiment/pull/15)
 * CHANGELOG [#14](https://github.com/amirkhaniansev/java_experiment/pull/14)
 * README Change [#13](https://github.com/amirkhaniansev/java_experiment/pull/13)
 * README [#11](https://github.com/amirkhaniansev/java_experiment/pull/11)
